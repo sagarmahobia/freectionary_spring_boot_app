@@ -5,13 +5,26 @@
  */
 package com.sagar.freectionary;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+
 /**
  *
  * @author SAGAR MAHOBIA
  */
 public class BeanScope {
 
-    public static final String PROTOTYPE = "prototype";
-    public static final String SINGLETON = "singleton";
+    @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+    public @interface Singleton {
+
+    }
+
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public @interface Prototype {
+
+    }
+
+    public static final String PROTOTYPE = ConfigurableBeanFactory.SCOPE_PROTOTYPE;
+    public static final String SINGLETON = ConfigurableBeanFactory.SCOPE_SINGLETON;
 
 }
