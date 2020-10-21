@@ -6,21 +6,14 @@
 package com.sagar.freectionary.repository;
 
 import com.sagar.freectionary.enums.RelationType;
-import com.sagar.freectionary.models.Dictionary;
-import com.sagar.freectionary.models.Index;
-import com.sagar.freectionary.models.Relation;
-import com.sagar.freectionary.models.Sense;
-import com.sagar.freectionary.models.SenseGroup;
-import com.sagar.freectionary.models.Word;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import com.sun.istack.internal.Nullable;
+import com.sagar.freectionary.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author SAGAR MAHOBIA
