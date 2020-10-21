@@ -1,30 +1,21 @@
 package com.sagar.freectionary.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Objects;
 
 /**
  * Created by SAGAR MAHOBIA on 25-Jul-18. at 16:28
  */
+
+
+@Getter
+@Setter
 public class Word implements Comparable<Word> {
 
     private String word;
     private int wordId;
-
-    public String getWord() {
-        return word;
-    }
-
-    public int getWordId() {
-        return wordId;
-    }
-
-    public void setWord(String word) {
-        this.word = word;
-    }
-
-    public void setWordId(int wordId) {
-        this.wordId = wordId;
-    }
 
     @Override
     public boolean equals(Object o) {

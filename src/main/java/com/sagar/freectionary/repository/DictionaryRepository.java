@@ -12,15 +12,17 @@ import com.sagar.freectionary.models.Relation;
 import com.sagar.freectionary.models.Sense;
 import com.sagar.freectionary.models.SenseGroup;
 import com.sagar.freectionary.models.Word;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import com.sun.istack.internal.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Repository;
 
 /**
- *
  * @author SAGAR MAHOBIA
  */
 @Repository()
@@ -117,12 +119,12 @@ public class DictionaryRepository {
         int lastRelationTypeId = -1;
         Relation relation;
         List<Word> words = new ArrayList<>();
-        SqlRowSet rowSet = jdbcTemplate.queryForRowSet(SqlStrings.FOR_MORPHS, senseId);
+        SqlRowSet rowSet = jdbcTemplate.queryForRowSet(SqlStrings.FOR_RELATION, senseId);
         while (rowSet.next()) {
 
-            int wordId = rowSet.getInt(0);
-            String lemma = rowSet.getString(1);
-            int relationTypeId = rowSet.getInt(2);
+            int wordId = rowSet.getInt("wordid");
+            String lemma = rowSet.getString("lemma");
+            int relationTypeId = rowSet.getInt("relationtypeid");
 
             if (lastRelationTypeId != relationTypeId) {
                 lastRelationTypeId = relationTypeId;
@@ -190,9 +192,9 @@ public class DictionaryRepository {
 
         while (rowSet.next()) {
 
-            int wordid = rowSet.getInt(0);
-            int start = rowSet.getInt(1);
-            int end = rowSet.getInt(2);
+            int wordid = rowSet.getInt("wordid");
+            int start = rowSet.getInt("indexstart");
+            int end = rowSet.getInt("indexend");
             Index index = new Index();
             index.setWordId(wordid);
             index.setStart(start);

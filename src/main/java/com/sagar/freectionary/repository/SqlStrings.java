@@ -21,8 +21,8 @@ interface SqlStrings {
             + " ON s.synsetid = smp.synsetid "
             + " WHERE s.sensegroupid =  ? ORDER BY s.senseid ASC";
 
-    String FOR_SYNSET_INDICES = "SELECT s.wordid,s.indexstart,s.indexend FROM idxsynsets s where synsetId = ? ";
-    String FOR_SAMPLESET_INDICES = "SELECT s.wordid,s.indexstart,s.indexend FROM idxsamplesets s where synsetId = ? ";
+    String FOR_SYNSET_INDICES = "SELECT s.wordid, s.indexstart, s.indexend FROM idxsynsets s where synsetId = ? order by s.indexstart";
+    String FOR_SAMPLESET_INDICES = "SELECT s.wordid, s.indexstart, s.indexend FROM idxsamplesets s where synsetId = ? order by s.indexstart";
 
     String FOR_RELATION = "SELECT r.wordid, w.lemma, r.relationtypeid FROM relations r INNER JOIN words w "
             + " ON r.wordid = w.wordid"
