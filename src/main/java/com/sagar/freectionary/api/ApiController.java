@@ -42,6 +42,4 @@ public class ApiController {
         return repository.getDictionary(wordId);
     }
 
-
-
 }
