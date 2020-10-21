@@ -5,11 +5,11 @@
 
     <groupId>com.sagar</groupId>
     <artifactId>freectionary</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>freectionary</name>
-    <description>Freectionary web project</description>
+    <description>Freectionary spring boot project</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -96,17 +96,11 @@
                 <version>2.1.0</version>
 
                 <configuration>
-
                     <from>
                         <image>openjdk:8-jre-alpine</image>
                     </from>
-                    <to>
-                        <image>appbackend:0.2.13</image>
-                    </to>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-
 </project>
