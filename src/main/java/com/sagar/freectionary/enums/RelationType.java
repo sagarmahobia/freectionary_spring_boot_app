@@ -1,8 +1,11 @@
 package com.sagar.freectionary.enums;
 
+import lombok.Getter;
+
 /**
  * Created by SAGAR MAHOBIA on 29-Jul-18. at 21:01
  */
+@Getter
 public enum RelationType {
     Antonyms("Antonyms", 1),
     Derivation("Derived words", 2),
@@ -23,14 +26,6 @@ public enum RelationType {
         this.name = name;
         this.id = id;
 
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public static RelationType getRelationTypeById(int id) {
