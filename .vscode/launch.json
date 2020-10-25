@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FreectionaryApplication<freectionary>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.sagar.freectionary.FreectionaryApplication",
+            "projectName": "freectionary",
+            "args": ""
+        }
+    ]
+}

@@ -32,12 +32,12 @@ public class ApiController {
     @Autowired
     SearchRepository searchRepository;
 
-    @GetMapping("/api/v1/search")
+    @GetMapping("/v1/search")
     public List<Word> query(@Param("q") String q) {
         return searchRepository.searchByQuerySingle(q);
     }
 
-    @GetMapping("/api/v1/dictionary/{word_id}")
+    @GetMapping("/v1/dictionary/{word_id}")
     public Dictionary getDictionary(@PathVariable("word_id") Integer wordId) {
         return repository.getDictionary(wordId);
     }

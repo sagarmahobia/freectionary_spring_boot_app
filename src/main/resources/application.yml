@@ -3,4 +3,4 @@ spring:
     url: jdbc:mysql://${FR_DB_HOST}:3306/${FR_DB_NAME}
     username: ${FR_DB_USERNAME}
     password: ${FR_DB_PASSWORD}
-server.port: 8090
+server.port: 8081
